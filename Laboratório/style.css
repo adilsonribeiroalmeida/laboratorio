@@ -1,0 +1,64 @@
+.pai {
+  position: relative;
+  width: 305px;
+  height: 305px;
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+.filho1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.filho2 {
+    width: 100px;
+    height: 100px;
+    border: 10px solid yellow;
+    background-color: purple;
+}
+
+@media(min-width:992px) {
+   .filho2 {
+       width: 100px;
+       height: 100px;
+       background-color: blue;
+    }
+}
+  
+.filho3 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+.filho4 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+.filho5 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
+.filho6 {
+    width:  100px;
+    height: 100px;
+    background-color: pink;
+}
+.filho7 {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
+.filho8 {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
+.filho9 {
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+}
