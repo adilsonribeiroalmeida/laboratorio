@@ -149,7 +149,7 @@ header nav ul li a:hover {
 }
 @media (min-width: 992px) {
   .depoimentos iframe {
-    width: 33.33%;
+    width: 33.33% !important;
   }
 }
 .galeria .d-flex > div {

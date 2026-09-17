@@ -32,3 +32,12 @@ function atualizarContadorDeProdutosNoCarrinho() {
     contadorDeProdutosNoCarrinho();
 }
 atualizarContadorDeProdutosNoCarrinho();
+document.getElementById('formulario-newsletter').addEventListener('submit',function(evento){
+  evento.preventDefault();
+  let email= document.getElementById('fnEmail').value;
+  let mensagem = `Novo inscrito!\n\n`;
+  mensagem += `Email: ${email}`;
+  let mensagemFormatada = encodeURIComponent(mensagem);
+  let numeroWhatsapp = '+5517997428837';
+  window.open(`https://wa.me/${numeroWhatsapp}?text=${mensagemFormatada}`,'_blank');
+});

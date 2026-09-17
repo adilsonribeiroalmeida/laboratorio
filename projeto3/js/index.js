@@ -3,7 +3,7 @@ window
   .then((resposta) => resposta.json())
   .then((produtos) => {
     let html = '';
-    produtos.forEach((produto)=>{
+    produtos.forEach((produto) => {
       html += `
       <div class="border p-2">
             <div class="text-center">
@@ -20,7 +20,7 @@ window
             <div class="mt-1 d-flex justify-content-between align-items-center">
               <span>
                 R$
-                <span class="text-success">${produto.preco.toFixed(2).replace('.',',')}</span>
+                <span class="text-success">${produto.preco.toFixed(2).replace('.', ',')}</span>
               </span>
               <button
                 class="btn btn-success"
@@ -41,7 +41,7 @@ window
       document.getElementById('lista-de-produtos').innerHTML = html;
     });
   });
-  // SERVIÇOS
+// SERVIÇOS
 fetch('./api/servicos.json')
   .then((resposta) => resposta.json())
   .then((servicos) => {
@@ -73,7 +73,7 @@ fetch('./api/servicos.json')
 
     document.getElementById('lista-de-servicos').innerHTML = html;
   });
-  fetch('./api/posts.json')
+fetch('./api/posts.json')
   .then((resposta) => resposta.json())
   .then((posts) => {
     let html = '';
@@ -100,7 +100,7 @@ fetch('./api/servicos.json')
 
     document.getElementById('lista-de-posts').innerHTML = html;
   });
-   fetch('./api/depoimentos.json')
+fetch('./api/depoimentos.json')
   .then((resposta) => resposta.json())
   .then((depoimentos) => {
     let html = '';
@@ -129,4 +129,25 @@ fetch('./api/servicos.json')
     });
 
     document.getElementById('lista-de-depoimentos').innerHTML = html;
+  });
+document
+  .getElementById('formulario-agendamento')
+  .addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    let nome = document.getElementById('faNome').value;
+    let email = document.getElementById('faEmail').value;
+    let telefone = document.getElementById('faTelefone').value;
+    let data = document.getElementById('faData').value;
+    let dataFormatada = data.split('-').reverse().join('/');
+    let mensagem = `Novo agendamento recebido!\n\n`;
+    mensagem += `Nome: ${nome}\n`;
+    mensagem += `Email: ${email}\n`;
+    mensagem += `Telefone: ${telefone}\n`;
+    mensagem += `Data: ${dataFormatada}`;
+    let mensagemFormatada = encodeURIComponent(mensagem);
+    let numeroWhatsapp = '+5517997428837';
+    window.open(
+      `https://wa.me/${numeroWhatsapp}?text=${mensagemFormatada}`,
+      '_blank',
+    );
   });

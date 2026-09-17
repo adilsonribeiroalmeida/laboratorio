@@ -87,8 +87,7 @@
           <h3 class="fs-2">Jardinagem e manutenção</h3>
         </div>
         <form
-          action=""
-          method="post"
+          id="formulario-agendamento"
           class="p-5 d-md-inline-block mt-5 mt-lg-0"
         >
           <h4 class="fs-2 text-white text-center text-uppercase">
@@ -98,6 +97,7 @@
             Informe seus dados abaixo
           </p>
           <input
+          id="faNome"
             type="text"
             placeholder="Nome"
             name="nome"
@@ -105,6 +105,7 @@
             class="d-block w-100 mt-1 p-1 border-0"
           />
           <input
+          id="faEmail"
             type="email"
             placeholder="Email"
             name="email"
@@ -112,6 +113,7 @@
             class="d-block w-100 mt-1 p-1 border-0"
           />
           <input
+          id="faTelefone"
             type="number"
             placeholder="Telefone"
             name="telefone"
@@ -119,6 +121,7 @@
             class="d-block w-100 mt-1 p-1 border-0"
           />
           <input
+          id="faData"
             type="date"
             placeholder="Data"
             name="data"
@@ -286,7 +289,7 @@
           <table>
             <tr>
               <td></td>
-              <td class="text-center">Standart</td>
+              <td class="text-center">Standard</td>
               <td class="text-center">Premium</td>
               <td class="text-center">Business</td>
             </tr>
@@ -335,13 +338,13 @@
             <tr>
               <td></td>
               <td class="text-center">
-                <a href="" class="btn btn-warning w-100">Comprar</a>
+                <a href="./plano-standard.html" class="btn btn-warning w-100">Comprar</a>
               </td>
               <td class="text-center">
-                <a href="" class="btn btn-warning w-100">Comprar</a>
+                <a href="./plano-premium.html" class="btn btn-warning w-100">Comprar</a>
               </td>
               <td class="text-center">
-                <a href="" class="btn btn-warning w-100">Comprar</a>
+                <a href="./plano-business.html" class="btn btn-warning w-100">Comprar</a>
               </td>
             </tr>
           </table>
@@ -454,7 +457,7 @@
             <li><a href="./servicos.html">Serviços</a></li>
             <li><a href="./produtos.html">Produtos</a></li>
             <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contatos.html">Contato</a></li>
+            <li><a href="./contato.html">Contato</a></li>
           </ul>
         </div>
         <div class="w-lg-25 mt-5 mt-lg-0">
@@ -480,10 +483,10 @@
             </li>
           </ul>
         </div>
-        <div class="w-lg-25 mt-5 mt-lg-0">
+        < div class="w-lg-25 mt-5 mt-lg-0">
           <h3>Newsletter</h3>
-          <form action="" class="mt-1">
-            <input type="email" class="form-control d-block w-100" />
+          <form class="mt-1" id="formulario-newsletter">
+            <input type="email" class="form-control d-block w-100" id="fnEmail" required />
             <button type="submit" class="mt-1 btn btn-success">
               Inscrever
             </button>
