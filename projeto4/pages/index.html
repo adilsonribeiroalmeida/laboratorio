@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa XPTO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/framework.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="shadow sticky-top bg-white">
+      <div
+        class="d-lg-flex justify-content-between container align-items-center"
+      >
+        <div class="d-flex align-items-center justify-content-between">
+          <h1 class="text-success">Empresa XPTO</h1>
+          <i class="fa-solid fa-bars d-lg-none" id="hamburguer"></i>
+        </div>
+        <nav class="d-none d-lg-inline-block" id="menu">
+          <ul class="d-lg-flex list-unstyled column-gap-3">
+            <li>
+              <a href="./index.html" class="text-decoration-none text-dark">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./sobre.html" class="text-decoration-none text-dark">
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a href="./servicos.html" class="text-decoration-none text-dark">
+                Serviços
+              </a>
+            </li>
+            <li>
+              <a href="./produtos.html" class="text-decoration-none text-dark">
+                Produtos
+              </a>
+            </li>
+            <li>
+              <a href="./blog.html" class="text-decoration-none text-dark">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="./contato.html" class="text-decoration-none text-dark">
+                Contato
+              </a>
+            </li>
+            <li>
+              <a href="./carrinho.html" class="text-decoration-none text-dark position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="carrinho-quantidade">
+                  0
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="py-5 hero text-md-center">
+      <div
+        class="container py-5 d-lg-flex justify-content-between align-items-center"
+      >
+        <div class="text-white">
+          <h2 class="fs-1">
+            Serviço completo para
+            <span class="d-block text-uppercase">
+              residências e comércios
+            </span>
+          </h2>
+          <h3 class="fs-2">Jardinagem e manutenção</h3>
+        </div>
+        <form
+          id="formulario-agendamento"
+          class="p-5 d-md-inline-block mt-5 mt-lg-0"
+        >
+          <h4 class="fs-2 text-white text-center text-uppercase">
+            Agendamento
+          </h4>
+          <p class="text-white text-center mt-1 mb-3">
+            Informe seus dados abaixo
+          </p>
+          <input
+          id="faNome"
+            type="text"
+            placeholder="Nome"
+            name="nome"
+            required
+            class="d-block w-100 mt-1 p-1 border-0"
+          />
+          <input
+          id="faEmail"
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+            class="d-block w-100 mt-1 p-1 border-0"
+          />
+          <input
+          id="faTelefone"
+            type="number"
+            placeholder="Telefone"
+            name="telefone"
+            required
+            class="d-block w-100 mt-1 p-1 border-0"
+          />
+          <input
+          id="faData"
+            type="date"
+            placeholder="Data"
+            name="data"
+            required
+            class="d-block w-100 mt-1 p-1 border-0"
+          />
+          <button
+            type="submit"
+            class="d-block w-100 mt-1 btn btn-dark text-uppercase"
+          >
+            Agendar
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="py-5 servicos">
+      <h2 class="text-center mb-5 text-uppercase fw-light fs-1">Serviços</h2>
+      <div class="container d-lg-flex column-gap-3" id="lista-de-servicos">
+        
+      </div>
+    </section>
+    <section class="sobre bg-success text-white py-5">
+      <div class="container">
+        <h2 class="text-center text-uppercase fs-1 fw-light mb-5">Sobre</h2>
+        <p class="text-center mb-5">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia eos
+          error eaque sint temporibus. Aliquid eaque exercitationem quidem
+          assumenda? Cumque sint inventore officiis repudiandae ratione nemo
+          saepe nobis aut commodi?
+        </p>
+        <div class="d-lg-flex column-gap-5 align-items-center">
+          <div class="mb-5 mb-lg-0">
+            <img
+              src="./img/empresa.jpg"
+              alt="Fachada da Empresa"
+              class="img-fluid"
+            />
+          </div>
+          <ul class="list-unstyled">
+            <li>
+              <h3 class="text-uppercase fw-light">Missão</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Facilis consequatur quo deserunt quod ipsa? Ipsam quasi animi
+                magnam enim quo earum! Vero, tenetur! Repellat, ut explicabo sed
+                perspiciatis eius voluptate.
+              </p>
+            </li>
+            <li>
+              <h3 class="text-uppercase fw-light">Visão</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                quidem praesentium sed ipsum nobis quas cupiditate modi animi.
+                Commodi nemo delectus ea tempore ratione, iusto quos. Eos magni
+                molestiae laboriosam.
+              </p>
+            </li>
+            <li>
+              <h3 class="text-uppercase fw-light">Valores</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quisquam cum ex corporis voluptas illum, mollitia, nam non vel,
+                animi aliquid quia nobis? Sed aperiam obcaecati officia tenetur
+                quis! Vero, blanditiis?
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 produtos">
+      <div class="container">
+        <h2 class="text-center text-uppercase fw-light fs-1 mb-5">Produtos</h2>
+        <div class="d-lg-flex column-gap-3" id="lista-de-produtos">
+         
+        </div>
+      </div>
+    </section>
+    <section class="bg-warning py-5 text-white text-center numeros">
+      <div class="container d-lg-flex justify-content-center column-gap-3">
+        <div class="position-relative">
+          <i class="fa-solid fa-calendar-days fs-1"></i>
+          <h3 class="fs-2 mt-1">20</h3>
+          <p class="mt-1">Anos de experiência</p>
+        </div>
+        <div class="position-relative">
+          <i class="fa-solid fa-user-group fs-1"></i>
+          <h3 class="fs-2 mt-1">350+</h3>
+          <p class="mt-1">Clientes atendidos</p>
+        </div>
+        <div class="position-relative">
+          <i class="fa-solid fa-list-check fs-1"></i>
+          <h3 class="fs-2 mt-1">1200+</h3>
+          <p class="mt-1">Projetos desenvolvidos</p>
+        </div>
+        <div class="position-relative">
+          <i class="fa-regular fa-clock fs-1"></i>
+          <h3 class="fs-2 mt-1">35000</h3>
+          <p class="mt-1">Horas de dedicação</p>
+        </div>
+      </div>
+    </section>
+    <section class="marcas py-5">
+      <div class="container py-5">
+        <h2 class="text-center text-uppercase fs-1 fw-light mb-5">
+          Marcas atendidas
+        </h2>
+        <div class="d-flex flex-wrap">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente1.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente2.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente3.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente4.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente5.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente6.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente7.png" alt="" class="img-fluid" />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/cliente8.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-success text-white py-5 depoimentos">
+      <div class="container py-5">
+        <h2 class="text-center text-uppercase fs-1 fw-light mb-5">
+          Depoimentos
+        </h2>
+        <div class="d-lg-flex column-gap-3" id="lista-de-depoimentos">
+         
+        </div>
+      </div>
+    </section>
+    <section class="galeria py-5 bg-light">
+      <div class="container py-5">
+        <h2 class="text-center mb-5 text-uppercase fs-1 fw-light">Galeria</h2>
+        <div class="d-flex flex-wrap">
+          <div style="background-image: url('./img/galeria1.jfif')"></div>
+          <div style="background-image: url('./img/galeria2.jfif')"></div>
+          <div style="background-image: url('./img/galeria3.jfif')"></div>
+          <div style="background-image: url('./img/galeria4.jfif')"></div>
+          <div style="background-image: url('./img/galeria5.jpg')"></div>
+          <div style="background-image: url('./img/galeria6.jfif')"></div>
+          <div style="background-image: url('./img/galeria7.jpg')"></div>
+          <div style="background-image: url('./img/galeria8.jpg')"></div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 planos">
+      <div class="container py-5">
+        <h2 class="text-center mb-5 text-uppercase fs-1 fw-light">Planos</h2>
+        <div class="table-responsive">
+          <table>
+            <tr>
+              <td></td>
+              <td class="text-center">Standard</td>
+              <td class="text-center">Premium</td>
+              <td class="text-center">Business</td>
+            </tr>
+            <tr>
+              <td>Serviços</td>
+              <td class="text-center">R$ 99,90</td>
+              <td class="text-center">R$ 149,90</td>
+              <td class="text-center">R$ 199,90</td>
+            </tr>
+            <tr>
+              <td>Serviço 1</td>
+              <td class="text-center">
+                <i class="fa-solid fa-check text-success"></i>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-check text-success"></i>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-check text-success"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Serviço 2</td>
+              <td class="text-center">
+                <i class="fa-solid fa-xmark text-warning"></i>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-check text-success"></i>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-check text-success"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Serviço 3</td>
+              <td class="text-center">
+                <i class="fa-solid fa-xmark text-warning"></i>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-xmark text-warning"></i>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-check text-success"></i>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="text-center">
+                <a href="./plano-standard.html" class="btn btn-warning w-100">Comprar</a>
+              </td>
+              <td class="text-center">
+                <a href="./plano-premium.html" class="btn btn-warning w-100">Comprar</a>
+              </td>
+              <td class="text-center">
+                <a href="./plano-business.html" class="btn btn-warning w-100">Comprar</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light blog">
+      <div class="container py-5">
+        <h2 class="text-center text-uppercase fs-1 fw-light mb-5">Blog</h2>
+        <div class="d-lg-flex column-gap-3" id="lista-de-posts">
+          
+        </div>
+      </div>
+    </section>
+    <section class="bg-warning py-5 text-white text-center dados">
+      <div class="container d-lg-flex column-gap-3">
+        <div>
+          <i class="fa-solid fa-location-dot fs-1"></i>
+          <span class="d-block mt-2 fs-5">
+            Rua Belo Horizonte 123, Centro
+            <br />
+            Sales - SP
+          </span>
+        </div>
+        <div class="mt-5 mt-lg-0">
+          <i class="fa-solid fa-envelope fs-1"></i>
+          <span class="d-block mt-2 fs-5">contato@empresaxpto.com.br</span>
+        </div>
+        <div class="mt-5 mt-lg-0">
+          <i class="fa-solid fa-mobile fs-1"></i>
+          <span class="d-block mt-2 fs-5">0800-123-4567</span>
+        </div>
+      </div>
+    </section>
+    <section class="position-relative mapa">
+      <div class="info bg-success text-white p-3 d-flex align-items-center">
+        Rua Belo Horizonte 123, Centro - Sales / SP
+        <br />
+        contato@empresaxpto.com.br
+        <br />
+        0800-123-4567
+      </div>
+      <iframe
+        class="w-100"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2085.6701875859494!2d-49.4978652940358!3d-21.341024546870866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be786871b3ee47%3A0x5d8c8587b971d203!2sAv.%20Tirso%20Martins%2C%2077%2C%20Sales%20-%20SP%2C%2014980-000!5e0!3m2!1spt-BR!2sbr!4v1777673993032!5m2!1spt-BR!2sbr"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+    <section class="bg-warning text-white py-5 call-to-action text-center">
+      <div
+        class="container py-5 d-lg-flex justify-content-between align-items-center"
+      >
+        <h2 class="fs-2 fw-light">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </h2>
+        <a href="./contato.html" class="mt-5 mt-lg-0">Agendar</a>
+      </div>
+    </section>
+    <section class="py-5 fale-conosco">
+      <div class="container py-5">
+        <h2 class="text-center text-uppercase fs-1 fw-light mb-5">
+          Fale conosco
+        </h2>
+        <form action="" method="post">
+          <input
+            type="text"
+            placeholder="Nome"
+            class="form-control d-block w-100 mb-1 form-control-lg"
+            name="nome"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="form-control d-block w-100 mb-1 form-control-lg"
+            name="email"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Telefone"
+            class="form-control d-block w-100 mb-1 form-control-lg"
+            name="telefone"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Mensagem"
+            class="form-control d-block w-100 mb-1 form-control-lg"
+            name="mensagem"
+            required
+          />
+          <button class="btn btn-success d-block w-100 btn-lg" type="submit">
+            Enviar
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="bg-dark text-white py-5 text-center text-lg-start">
+      <div class="container d-lg-flex">
+        <div class="w-lg-25">
+          <h3>Menu</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./servicos.html">Serviços</a></li>
+            <li><a href="./produtos.html">Produtos</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="w-lg-25 mt-5 mt-lg-0">
+          <h3>Produtos</h3>
+          <ul class="list-unstyled">
+            <li><a href="./produtos.html?categoria=1">Categoria A</a></li>
+            <li><a href="./produtos.html?categoria=2">Categoria B</a></li>
+          </ul>
+        </div>
+        <div class="w-lg-25 mt-5 mt-lg-0">
+          <h3>Serviços</h3>
+          <ul class="list-unstyled">
+            <li>
+              <a href="./servico-corte-e-manutencao.html">Corte e manutenção</a>
+            </li>
+            <li>
+              <a href="./servico-adubacao-e-fertilizacao.html"
+                >Adubação e fertilização</a
+              >
+            </li>
+            <li>
+              <a href="./servico-controle-de-pragas.html">Controle de pragas</a>
+            </li>
+          </ul>
+        </div>
+        < div class="w-lg-25 mt-5 mt-lg-0">
+          <h3>Newsletter</h3>
+          <form class="mt-1" id="formulario-newsletter">
+            <input type="email" class="form-control d-block w-100" id="fnEmail" required />
+            <button type="submit" class="mt-1 btn btn-success">
+              Inscrever
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="container mt-5 d-lg-flex justify-content-between border-top border-dark-subtle pt-5"
+      >
+        <div>&copy; 2025 Empresa XPTO</div>
+        <div class="mt-5 mt-lg-0">
+          <a href="https://youtube.com">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a href="https://facebook.com">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a href="https://instagram.com"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
