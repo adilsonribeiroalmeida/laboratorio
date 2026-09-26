@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa XPTO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/framework.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="shadow sticky-top bg-white">
+      <div class="d-lg-flex justify-content-between container align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+          <h1 class="text-success">Empresa XPTO</h1>
+          <i class="fa-solid fa-bars d-lg-none" id="hamburguer"></i>
+        </div>
+        <nav class="d-none d-lg-inline-block" id="menu">
+          <ul class="d-lg-flex list-unstyled column-gap-3">
+            <li>
+              <a href="./index.html" class="text-decoration-none text-dark"> Home </a>
+            </li>
+            <li>
+              <a href="./sobre.html" class="text-decoration-none text-dark"> Sobre </a>
+            </li>
+            <li>
+              <a href="./servicos.html" class="text-decoration-none text-dark"> Serviços </a>
+            </li>
+            <li>
+              <a href="./produtos.html" class="text-decoration-none text-dark"> Produtos </a>
+            </li>
+              <li>
+              <a href="./blog.html" class="text-decoration-none text-dark"> Blog </a>
+            </li>
+            <li>
+              <a href="./contato.html" class="text-decoration-none text-dark"> Contato </a>
+            </li>
+            <li>
+              <a href="./carrinho.html" class="text-decoration-none text-dark position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="carrinho-quantidade">
+                  0
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <section class="py-5 servicos">
+      <h2 class="text-center mb-5 text-uppercase fw-light fs-1">Serviços</h2>
+      <div class="container d-lg-flex column-gap-3" id="lista-de-servicos">
+       
+      </div>
+    </section>
+   
+    <footer class="bg-dark text-white py-5 text-center text-lg-start">
+      <div class="container d-lg-flex">
+        <div class="w-lg-25">
+          <h3>Menu</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./servicos.html">Serviços</a></li>
+            <li><a href="./produtos.html">Produtos</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="w-lg-25 mt-5 mt-lg-0">
+          <h3>Produtos</h3>
+          <ul class="list-unstyled">
+            <li><a href="./produtos.html?categoria=1">Categoria A</a></li>
+            <li><a href="./produtos.html?categoria=2">Categoria B</a></li>
+          </ul>
+        </div>
+        <div class="w-lg-25 mt-5 mt-lg-0">
+          <h3>Serviços</h3>
+          <ul class="list-unstyled">
+            <li><a href="./servico-corte-e-manutencao.html">Corte e manutenção</a></li>
+            <li><a href="./servico-adubacao-e-fertilizacao.html">Adubação e fertilização</a></li>
+            <li><a href="./servico-controle-de-pragas.html">Controle de pragas</a></li>
+          </ul>
+        </div>
+        <div class="w-lg-25 mt-5 mt-lg-0">
+          <h3>Newsletter</h3>
+           <form class="mt-1" id="formulario-newsletter">
+            <input type="email" class="form-control d-block w-100" id="fnEmail" required />
+            <button type="submit" class="mt-1 btn btn-success">
+              Inscrever
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container mt-5 d-lg-flex justify-content-between border-top border-dark-subtle pt-5">
+        <div>&copy; 2025 Empresa XPTO</div>
+        <div class="mt-5 mt-lg-0">
+          <a href="https://youtube.com">
+            <i class="fa-brands fa-youtube"></i> </a
+          >
+          &nbsp;
+          &nbsp;
+          <a href="https://facebook.com">
+            <i class="fa-brands fa-facebook"></i> </a
+          >
+          &nbsp;
+          &nbsp;
+          <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/servicos.js"></script>
+  </body>
+</html>
