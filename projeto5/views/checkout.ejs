@@ -1,0 +1,65 @@
+<%- include('partials/header') %>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 text-uppercase fw-light fs-1">Checkout</h2>
+    <div class="d-lg-flex column-gap-3">
+      <div class="w-lg-50">
+        <table class="table table-bordered w-100">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantidade</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody id="itens"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Total</td>
+              <td class="text-center">R$ <span id="total">0,00</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="w-lg-50">
+        <form id="formulario">
+          <input
+            type="text"
+            class="d-block form-control w-100 mb-1"
+            placeholder="Nome"
+            id="nome"
+            required
+          />
+          <input
+            type="email"
+            class="d-block form-control w-100 mb-1"
+            placeholder="Email"
+            id="email"
+            required
+          />
+          <input
+            type="number"
+            class="d-block form-control w-100 mb-1"
+            placeholder="Telefone"
+            id="telefone"
+            required
+          />
+          <button
+            class="d-block btn btn-dark w-100 text-uppercase"
+            type="submit"
+          >
+            Enviar pedido
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="mt-5">
+      <a href="./carrinho.html" class="btn btn-success d-inline-block"
+        ><i class="fa-solid fa-arrow-left"></i> Voltar para o carrinho</a
+      >
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

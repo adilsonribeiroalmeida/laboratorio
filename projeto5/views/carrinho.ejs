@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 text-uppercase fw-light fs-1">Carrinho</h2>
+    <div class="d-none d-lg-block">
+      <table class="table-bordered w-100 table">
+        <thead>
+          <tr>
+            <th class="text-start">Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela"></tbody>
+      </table>
+    </div>
+    <div id="carrinho-mobile" class="d-lg-none"></div>
+    <div class="text-end mt-5">
+      <a href="./checkout.html" class="btn btn-success d-inline-block"
+        >Ir para checkout <i class="fa-solid fa-arrow-right"></i
+      ></a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
