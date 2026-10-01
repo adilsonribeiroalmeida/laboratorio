@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.get('/sobre', (req, res) => {
   //res.send('Sobre');
-  res.sendFile(path.join(__dirname, 'pages', 'sobre.html'));
+  res.render('sobre');
 });
 
 app.get('/contato', (req, res) => {
