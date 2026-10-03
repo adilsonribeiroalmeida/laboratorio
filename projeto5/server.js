@@ -22,88 +22,82 @@ app.get('/sobre', (req, res) => {
 
 app.get('/contato', (req, res) => {
   //res.send('Você acessou a página contato');
-  res.sendFile(path.join(__dirname, 'pages', 'contato.html'));
+  res.render('contato');
 });
 
 app.get('/servicos', (req, res) => {
   //res.send('Você acessou a página serviços');
-  res.sendFile(path.join(__dirname, 'pages', 'servicos.html'));
+  res.render('servicos');
 });
 
 app.get('/produtos', (req, res) => {
   //res.send('Você acessou a página produtos');
-  res.sendFile(path.join(__dirname, 'pages', 'produtos.html'));
+  res.render('produtos');
 });
 
 app.get('/blog', (req, res) => {
   //res.send('Você acessou a página blog');
-  res.sendFile(path.join(__dirname, 'pages', 'blog.html'));
+  res.render('blog');
 });
 
 app.get('/carrinho', (req, res) => {
   //res.send('Você acessou a página carrinho');
-  res.sendFile(path.join(__dirname, 'pages', 'carrinho.html'));
+  res.render('carrinho');
 });
 
 app.get('/blog-titulo-1', (req, res) => {
   //res.send('Você acessou o primeiro artigo do blog');
-  res.sendFile(path.join(__dirname, 'pages', 'blog-titulo-1.html'));
+  res.render('blog-titulo-1');
 });
 
 app.get('/blog-titulo-2', (req, res) => {
   //res.send('Você acessou o segundo artigo do blog');
-  res.sendFile(path.join(__dirname, 'pages', 'blog-titulo-2.html'));
+  res.render('blog-titulo-2');
 });
 
 app.get('/blog-titulo-3', (req, res) => {
   //res.send('Você acessou o terceiro artigo do blog');
-  res.sendFile(path.join(__dirname, 'pages', 'blog-titulo-3.html'));
+  res.render('blog-titulo-3');
 });
 
 app.get('/checkout', (req, res) => {
   //res.send('Você acessou a página checkout');
-  res.sendFile(path.join(__dirname, 'pages', 'checkout.html'));
+  res.render('checkout');
 });
 
 app.get('/obrigado', (req, res) => {
   //res.send('Você acessou a pasta obrigado');
-  res.sendFile(path.join(__dirname, 'pages', 'obrigado.html'));
+  res.render('obrigado');
 });
 
 app.get('/plano-business', (req, res) => {
   //res.send('Você acessou o plano business');
-  res.sendFile(path.join(__dirname, 'pages', 'plano-business.html'));
+  res.render('plano-business');
 });
 
 app.get('/plano-premium', (req, res) => {
   //res.send('Você acessou o plano premium');
-  res.sendFile(path.join(__dirname, 'pages', 'plano-premium.html'));
+  res.render('plano-premium');
 });
 
 app.get('/plano-standard', (req, res) => {
   //res.send('Você acessou o plano standard');
-  res.sendFile(path.join(__dirname, 'pages', 'plano-standard.html'));
+  res.render('plano-standard');
 });
 
 app.get('/servico-adubacao-e-fertilizacao', (req, res) => {
   //res.send('Você acessou a pasta de servico-adubacao-e-fertilizacao');
-  res.sendFile(
-    path.join(__dirname, 'pages', 'servico-adubacao-e-fertilizacao.html'),
-  );
+  res.render('servico-adubacao-e-fertilizacao');
 });
 
 app.get('/servico-controle-de-pragas', (req, res) => {
   //res.send('Você acessou a pasta de servico-controle-de-pragas');
-  res.sendFile(
-    path.join(__dirname, 'pages', 'servico-controle-de-pragas.html'),
-  );
+  res.render('servico-controle-de-pragas');
 });
 
 app.get('/servico-corte-e-manutencao', (req, res) => {
   //res.send('Você acessou a pasta de servico-corte-e-manutencao');
-  res.sendFile(
-    path.join(__dirname, 'pages', 'servico-corte-e-manutencao.html'),
-  );
+  res.render('servico-corte-e-manutencao');
 });
 
 app.listen(3000, () => {
