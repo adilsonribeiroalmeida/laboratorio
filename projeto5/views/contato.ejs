@@ -42,12 +42,13 @@
 <section class="py-5 fale-conosco">
   <div class="container py-5">
     <h2 class="text-center text-uppercase fs-1 fw-light mb-5">Fale conosco</h2>
-    <form action="" method="post">
+    <form method="post" id="formulario-contato">
       <input
         type="text"
         placeholder="Nome"
         class="form-control d-block w-100 mb-1 form-control-lg"
         name="nome"
+        id="nome"
         required
       />
       <input
@@ -55,6 +56,7 @@
         placeholder="Email"
         class="form-control d-block w-100 mb-1 form-control-lg"
         name="email"
+        id="email"
         required
       />
       <input
@@ -62,6 +64,7 @@
         placeholder="Telefone"
         class="form-control d-block w-100 mb-1 form-control-lg"
         name="telefone"
+        id="telefone"
         required
       />
       <input
@@ -69,6 +72,7 @@
         placeholder="Mensagem"
         class="form-control d-block w-100 mb-1 form-control-lg"
         name="mensagem"
+        id="mensagem"
         required
       />
       <button class="btn btn-success d-block w-100 btn-lg" type="submit">
@@ -77,5 +81,5 @@
     </form>
   </div>
 </section>
-
+<script src="./js/contato.js"></script>
 <%- include('partials/footer') %>

@@ -1,8 +1,3 @@
-document.getElementById('hamburguer').addEventListener('click', function () {
-  // window.alert('clicou no hamburguer');
-  document.getElementById('menu').classList.toggle('d-none');
-});
-
 function adicionarProdutoAoCarrinho(id, nome, preco, imagem) {
   let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
   let produtoExistente = carrinho.find((produto) => produto.id == id);
@@ -31,13 +26,24 @@ function atualizarContadorDeProdutosNoCarrinho() {
   document.getElementById('carrinho-quantidade').textContent =
     contadorDeProdutosNoCarrinho();
 }
-atualizarContadorDeProdutosNoCarrinho();
-document.getElementById('formulario-newsletter').addEventListener('submit',function(evento){
-  evento.preventDefault();
-  let email= document.getElementById('fnEmail').value;
-  let mensagem = `Novo inscrito!\n\n`;
-  mensagem += `Email: ${email}`;
-  let mensagemFormatada = encodeURIComponent(mensagem);
-  let numeroWhatsapp = '+5517997428837';
-  window.open(`https://wa.me/${numeroWhatsapp}?text=${mensagemFormatada}`,'_blank');
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .getElementById('formulario-newsletter')
+    .addEventListener('submit', function (evento) {
+      evento.preventDefault();
+      let email = document.getElementById('fnEmail').value;
+      let mensagem = `Novo inscrito!\n\n`;
+      mensagem += `Email: ${email}`;
+      let mensagemFormatada = encodeURIComponent(mensagem);
+      let numeroWhatsapp = '+5517997428837';
+      window.open(
+        `https://wa.me/${numeroWhatsapp}?text=${mensagemFormatada}`,
+        '_blank',
+      );
+    });
+  document.getElementById('hamburguer').addEventListener('click', function () {
+    // window.alert('clicou no hamburguer');
+    document.getElementById('menu').classList.toggle('d-none');
+  });
+  atualizarContadorDeProdutosNoCarrinho();
 });

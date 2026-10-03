@@ -15,6 +15,12 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/index', (req, res) => {
+  // res.send('Home');
+  res.render('index');
+});
+
+
 app.get('/sobre', (req, res) => {
   //res.send('Sobre');
   res.render('sobre');

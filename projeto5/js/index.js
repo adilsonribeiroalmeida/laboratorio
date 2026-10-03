@@ -1,5 +1,5 @@
 window
-  .fetch('http://127.0.0.1:5500/projeto3/api/produtos.json')
+  .fetch('http://localhost:3000/api/produtos.json')
   .then((resposta) => resposta.json())
   .then((produtos) => {
     let html = '';
