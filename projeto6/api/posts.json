@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nome": "Título 1",
+    "descricao": "Resumo do post",
+    "imagem": "noticia1.webp",
+    "url": "./blog-titulo-1.html"
+  },
+
+  {
+    "id": 2,
+    "nome": "Título 2",
+    "descricao": "Resumo do post",
+    "imagem": "noticia2.webp",
+    "url": "./blog-titulo-2.html"
+  },
+  {
+    "id": 3,
+    "nome":"Título 3",
+    "descricao":"Resumo do post",
+    "imagem":"noticia3.webp",
+    "url":"./blog-titulo-3.html"
+  }
+]

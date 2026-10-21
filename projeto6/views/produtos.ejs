@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+<section class="py-5 produtos">
+  <div class="container">
+    <h2 class="text-center text-uppercase fw-light fs-1 mb-5">Produtos</h2>
+    <div class="d-lg-flex column-gap-3" id="lista-de-produtos"></div>
+  </div>
+</section>
+<section class="py-5 produtos">
+  <div class="container">
+    <h2 class="text-center text-uppercase fw-light fs-1 mb-5">Produtos</h2>
+    <div style="display: grid;grid-template-columns: repeat(4,1fr);gap: 30px;">
+      <% produtos.forEach((produto)=>{ %>
+        <div class="border p-2">
+            <div class="text-center">
+              <img src="https://placehold.co/400x400?text=Imagem" alt="<%= produto.nome %>" class="img-fluid">
+            </div>
+            <h3 class="mt-1">
+              <%= produto.nome %>
+            </h3>
+            <div class="mt-1 d-flex justify-content-between align-items-center">
+              <span>
+                R$
+                <span class="text-success"><%= produto.preco %></span>
+              </span>
+              <button class="btn btn-success" onclick="
+                  adicionarProdutoAoCarrinho(
+                  <%= produto.idProduto %>,
+                    '<%= produto.nome %>',
+                    <%= produto.preco %>,
+                    'https://placehold.co/400x400?text=Imagem'
+                  )
+                ">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<script src="./js/produtos.js"></script>
+<%- include('partials/footer') %>
