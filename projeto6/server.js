@@ -47,8 +47,18 @@ app.get('/contato', (req, res) => {
 });
 
 app.get('/servicos', (req, res) => {
-  //res.send('Você acessou a página serviços');
-  res.render('servicos');
+  const sql = 'select * from servicos';
+  conexao.query(sql, (erro, servicos) => {
+    res.render('servicos', { servicos });
+  });
+});
+
+app.get('/servicos/:slug', (req, res) => {
+  const { slug } = req.params;
+  const sql = `select * from servicos where slug = '${slug}'`;
+  conexao.query(sql, (erro, servico) => {
+    res.render('servico', { servico });
+  });
 });
 
 app.get('/produtos', (req, res) => {

@@ -1,6 +1,28 @@
 <%- include('partials/header') %>
 <section class="py-5 servicos">
   <h2 class="text-center mb-5 text-uppercase fw-light fs-1">Serviços</h2>
-  <div class="container d-lg-flex column-gap-3" id="lista-de-servicos"></div>
+  <div class="container d-lg-flex column-gap-3">
+    <% servicos.forEach((servico)=>{ %>
+     <div>
+          <div
+            class="capa shadow"
+            style="background-image: url('./img/<%= servico.imagem %>');"
+          ></div>
+
+          <h3 class="fs-2 fw-normal text-warning mb-2 mt-3">
+            <%= servico.nome %>
+          </h3>
+
+          <p class="mb-1">
+            <%= servico.descricao %>
+          </p>
+
+          <a href="/servicos/<%= servico.slug %>" class="text-decoration-none">
+            <span> + </span>
+            <span class="text-dark">Saiba mais</span>
+          </a>
+        </div>
+<% }) %>
+  </div>
 </section>
 <%- include('partials/footer') %>
