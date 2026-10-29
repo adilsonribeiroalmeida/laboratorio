@@ -55,8 +55,9 @@ app.get('/servicos', (req, res) => {
 
 app.get('/servicos/:slug', (req, res) => {
   const { slug } = req.params;
-  const sql = `select * from servicos where slug = '${slug}'`;
-  conexao.query(sql, (erro, servico) => {
+  const sql = `select * from servicos where slug = ?`;
+  conexao.query(sql, [slug], (erro, registros) => {
+    const servico = registros[0];
     res.render('servico', { servico });
   });
 });
@@ -69,8 +70,10 @@ app.get('/produtos', (req, res) => {
 });
 
 app.get('/blog', (req, res) => {
-  //res.send('Você acessou a página blog');
-  res.render('blog');
+  const sql = 'select * from artigos';
+  conexao.query(sql, (erro, artigos) => {
+    res.render('blog', { artigos });
+  });
 });
 
 app.get('/carrinho', (req, res) => {
