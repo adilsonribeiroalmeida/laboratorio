@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nome": "Corte e Manutenção",
+    "descricao": "Descrição do serviço",
+    "imagem": "servico-de-corte-e-manutencao.png",
+    "url": "./servico-corte-e-manutencao.html"
+  },
+
+  {
+    "id": 2,
+    "nome": "Adubação e Fertilização",
+    "descricao": "Descrição do serviço",
+    "imagem": "servico-de-adubacao-e-fertilizacao.webp",
+    "url": "./servico-adubacao-e-fertilizacao.html"
+  },
+  {
+    "id": 3,
+    "nome":"Controle de Pragas",
+    "descricao":"Descrição do serviço",
+    "imagem":"servico-controle-de-pragas.jpg",
+    "url":"./servico-controle-de-pragas.html"
+  }
+]
