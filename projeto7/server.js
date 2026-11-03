@@ -1,22 +1,20 @@
 const express = require('express');
 const path = require('path');
-const mysql = require('mysql2');
+const sequelize = require('./config/database');
+const Servico = require('./models/Servico');
 const app = express();
 
-const conexao = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'projetox',
-});
-
-conexao.connect((erro) => {
-  if (erro) {
-    console.log('Erro ao conectar com o mysql: ', erro);
-    return;
+async function testarConecao() {
+  try {
+    await sequelize.authenticate();
+    console.log('conectado ao mysql sequelize');
+  } catch (erro) {
+    console.log('erro ao conectar com sequelize');
+    console.log(erro);
   }
-  console.log('Conectado ao mysql!');
-});
+}
+
+testarConecao();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
