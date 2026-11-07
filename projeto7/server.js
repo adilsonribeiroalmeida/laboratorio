@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const sequelize = require('./config/database');
 const Servico = require('./models/Servico');
+const Produto = require('./models/Produto');
 const app = express();
 
 async function testarConecao() {
@@ -44,11 +45,11 @@ app.get('/contato', (req, res) => {
   res.render('contato');
 });
 
-app.get('/servicos', (req, res) => {
-  const sql = 'select * from servicos';
-  conexao.query(sql, (erro, servicos) => {
-    res.render('servicos', { servicos });
+app.get('/servicos', async (req, res) => {
+  const servicos = await Servico.findAll({
+    raw: true,
   });
+  res.render('servicos', { servicos });
 });
 
 app.get('/servicos/:slug', (req, res) => {
@@ -60,18 +61,18 @@ app.get('/servicos/:slug', (req, res) => {
   });
 });
 
-app.get('/produtos', (req, res) => {
-  const sql = 'select * from produtos';
-  conexao.query(sql, (erro, produtos) => {
-    res.render('produtos', { produtos });
+app.get('/produtos', async (req, res) => {
+  const produtos = await Produto.findAll({
+    raw: true,
   });
+  res.render('produtos', { produtos });
 });
 
-app.get('/blog', (req, res) => {
-  const sql = 'select * from artigos';
-  conexao.query(sql, (erro, artigos) => {
-    res.render('blog', { artigos });
+app.get('/blog', async (req, res) => {
+  const artigos = await Artigo.findAll({
+    raw: true,
   });
+  res.render('artigos', { artigos });
 });
 
 app.get('/carrinho', (req, res) => {
